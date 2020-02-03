@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "employeeHourApp", "camelCase"],
+    "component-selector": [true, "element", "employee-hour-app", "kebab-case"]
+  }
+}

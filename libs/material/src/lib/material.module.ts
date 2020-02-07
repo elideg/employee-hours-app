@@ -15,6 +15,7 @@ import  {
   MatSnackBarModule,
   MatTableModule,
   MatToolbarModule,
+  MatAutocompleteModule,
   MatButtonToggleModule
 }  from  '@angular/material';
 
@@ -23,6 +24,7 @@ const MODULE = [
   MatCardModule,
   MatCheckboxModule,
   MatFormFieldModule,
+  MatAutocompleteModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,

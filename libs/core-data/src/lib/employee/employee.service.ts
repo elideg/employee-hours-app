@@ -27,7 +27,7 @@ export class EmployeeService {
   }
 
   create(employee: Employee) {
-    return this.httpClient.patch(this.getUrl(), employee);
+    return this.httpClient.post(this.getUrl(), employee);
   }
 
   update(employee: Employee) {

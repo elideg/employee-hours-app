@@ -1,22 +1,22 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>
-      <h1>Projects</h1>
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-list>
-      <mat-list-item>
-        <h3 mat-line>
-          <!-- PROJECT DETAILS -->
-        </h3>
-        <p mat-line>
-          <!-- PROJECT DETAILS -->
-        </p>
-        <button mat-icon-button>
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-</mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Employees</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let employee of employees" (click)="selected.emit(employee)">
+          <h3 mat-line>
+            {{employee.name}}
+          </h3>
+          <p mat-line>
+            {{employee.location}}
+          </p>
+          <button mat-icon-button (click)="deleted.emit(employee); $event.stopImmediatePropagation()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>

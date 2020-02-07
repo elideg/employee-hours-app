@@ -4,3 +4,7 @@ export interface Employee {
   hourlyRate: number,
   location: string
 }
+export interface User {
+  email: string,
+  password: string
+}

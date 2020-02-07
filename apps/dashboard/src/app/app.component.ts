@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@employee-hour-app/core-data';
 
 @Component({
   selector: 'employee-hour-app-root',
@@ -11,4 +12,6 @@ export class AppComponent {
   links = [
     { path: '/employees', icon: 'person', title: 'employees' }
   ]
+  userIsAuthenticated = this.authService.isAuthenticated;
+  constructor(private authService: AuthService) {}
 }

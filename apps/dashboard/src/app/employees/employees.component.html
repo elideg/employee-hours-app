@@ -1,9 +1,17 @@
-<div class="container">
-
-  <div class="ml-5">
-    <employee-hour-app-employees-list>
+<div class="container mt-5 d-flex">
+  <div class="col-6">
+    <employee-hour-app-employees-list [employees]="employees$ | async"
+                                      (selected)="selectEmployee($event)"
+                                      (deleted)="deleteEmployee($event)">
     </employee-hour-app-employees-list>
   </div>
 
+  <div class="col-6">
+    <employee-hour-app-employees-details  [employee]="selectedEmployee$ | async"
+                                          [form]="form"
+                                          (saved)="saveEmployees($event)"
+                                          (cancelled)="cancel()">
+    </employee-hour-app-employees-details>
+  </div>
 </div>
 
